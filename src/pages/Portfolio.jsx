@@ -242,6 +242,32 @@ const CertificationsBox = styled.div`
   padding: 20px;
   font-size: 18px;
 `;
+const DevDescription = styled.div`
+  width: 1000px;
+  padding: 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ced4da;
+`;
+const LeftDev = styled.div`
+  width: 350px;
+  font-weight: bold;
+  line-height: 30px;
+`;
+const RightDev = styled.div`
+  width: 780px;
+`;
+const ListWrap = styled.ul`
+  list-style-type: disc;
+  padding-left: 20px;
+`;
+
+const List = styled.li`
+  font-size: 18px;
+  line-height: 40px;
+`;
 export default function Portfolio() {
   const [isFantionModalOpen, setIsFantionModalOpen] = useState(false);
   const [isPetTalkModalOpen, setIsPetTalkModalOpen] = useState(false);
@@ -446,10 +472,60 @@ export default function Portfolio() {
           </ProjectWrap>
         </FlexBox>
         <TitleBox>
+          <Title>교육</Title>
+        </TitleBox>
+        <DevDescription>
+          <LeftDev>
+            제로베이스 부트캠프
+            <br />
+            2024-01 ~ 2024-08
+          </LeftDev>
+          <RightDev>
+            <ListWrap>
+              <List>
+                자바스크립트 및 타입스크립트의 핵심 개념을 학습하고, 이를 다양한
+                프로젝트에 적용
+              </List>
+              <List>
+                React의 훅과 주요 라이브러리를 익히고, 개인 및 팀 프로젝트를
+                통해 실무 감각을 배양
+              </List>
+              <List>HTML과 CSS를 활용한 웹 개발의 기초부터 심화까지 학습</List>
+              <List>
+                웹 표준, 웹 접근성, 웹 호환성의 중요성을 이해하고 구현
+              </List>
+              <List>
+                팀 협업을 통해 원활한 소통과 문제 해결 능력을 향상시킴
+              </List>
+            </ListWrap>
+          </RightDev>
+        </DevDescription>
+        <DevDescription>
+          <LeftDev>
+            코딩애플 온라인 강의 수강
+            <br />
+            2024-03 ~ 2024-05
+          </LeftDev>
+          <RightDev>
+            <ListWrap>
+              <List>
+                협업 시 필수적인 Git과 GitHub 사용법을 익혀, 효율적인 버전
+                관리와 팀 작업을 경험{" "}
+              </List>
+              <List>
+                React의 기초부터 실무에 필요한 TypeScript를 활용하여 더 안전한
+                코드 작성법을 학습
+              </List>
+              <List>
+                개인 프로젝트에서 Firebase를 활용해 백엔드 없이 손쉽게
+                데이터베이스와 인증 시스템을 구현
+              </List>
+            </ListWrap>
+          </RightDev>
+        </DevDescription>
+        <TitleBox>
           <Title>Certifications</Title>
-          <CertificationsBox>
-            컴퓨터 활용능력 1급 (2023.06.09){" "}
-          </CertificationsBox>
+        <CertificationsBox>컴퓨터 활용능력 1급 (2023.06.09) </CertificationsBox>
         </TitleBox>
       </TitleBox>
       <Modal isOpen={isFantionModalOpen} onClose={closeFantionModal}>
