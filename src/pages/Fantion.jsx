@@ -7,6 +7,10 @@ const Wrap = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const ImgBox = styled.div`
   display: flex;
@@ -36,13 +40,16 @@ const TopBox = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #ced4da;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const ModalListBox = styled.div`
   width: 100%;
-  height: 60px;
   padding: 10px 0 10px 0;
   display: flex;
   align-items: center;
+  height: auto;
 `;
 const ModalLeft = styled.div`
   width: 200px;
@@ -146,32 +153,28 @@ const GitHubStrategy = styled.div`
   line-height: 40px;
   margin-top: 20px;
   font-size: 18px;
-  padding-bottom : 20px;
+  padding-bottom: 20px;
 `;
 const LinkBox = styled.div`
-  display : flex;
-  flex-direction : column;
-  line-height : 40px;
-  align-items : center;
-  justify-content : center;
-  margin-top : 30px;
-  margin-bottom : 40px;
-  
-`
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+`;
 const LinkTitle = styled.div`
-    font-size: 18px;
+  font-size: 18px;
   line-height: 40px;
   a {
-    
     transition: color 0.3s;
     color: black;
     &:hover {
-    color: #4fd66e;
+      color: #4fd66e;
+    }
   }
-  }
- 
-`
-
+`;
 
 export default function Fantion() {
   return (
@@ -343,13 +346,40 @@ export default function Fantion() {
         </GitHubStrategy>
       </ProjectInfo>
       <VideoEmbed />
-      <VideoEmbed2/>
+      <VideoEmbed2 />
       <ProjectInfo>
         <InfoName>프로젝트 링크</InfoName>
         <LinkBox>
-        <LinkTitle>FAN-TION : <Link to="https://fan-tion.vercel.app/" target="_blank" rel="noopener noreferrer">fan-tion.vercel.app</Link></LinkTitle>
-        <LinkTitle>Github : <Link to="https://github.com/Fan-Tion" target="_blank" rel="noopener noreferrer">github.com/Fan-tion</Link></LinkTitle>
-        <LinkTitle>Notion : <Link to="https://www.notion.so/3-Fan-Tion-Fandom-Auction-653e7db602c84c1987e9cbd94c6b5f77" target="_blank" rel="noopener noreferrer">notion.so/fantion</Link></LinkTitle>
+          <LinkTitle>
+            FAN-TION :{" "}
+            <Link
+              to="https://fan-tion.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              fan-tion.vercel.app
+            </Link>
+          </LinkTitle>
+          <LinkTitle>
+            Github :{" "}
+            <Link
+              to="https://github.com/Fan-Tion"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/Fan-tion
+            </Link>
+          </LinkTitle>
+          <LinkTitle>
+            Notion :{" "}
+            <Link
+              to="https://www.notion.so/3-Fan-Tion-Fandom-Auction-653e7db602c84c1987e9cbd94c6b5f77"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              notion.so/fantion
+            </Link>
+          </LinkTitle>
         </LinkBox>
       </ProjectInfo>
     </Wrap>

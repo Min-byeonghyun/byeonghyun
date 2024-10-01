@@ -16,7 +16,14 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const IconBox = styled.div`
@@ -27,6 +34,7 @@ const IconBox = styled.div`
 `;
 
 const PortfolioWrap = styled.h1`
+  margin-bottom: 40px;
   font-weight: 700;
   font-size: 40px;
 `;
@@ -34,8 +42,14 @@ const PortfolioWrap = styled.h1`
 const ProfileBox = styled.div`
   display: flex;
   align-items: center;
-  width: 1000px;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ProfileImg = styled.img`
@@ -45,8 +59,12 @@ const ProfileImg = styled.img`
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid #ced4da;
-`;
 
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+`;
 const ExplainWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,8 +73,11 @@ const ExplainWrap = styled.div`
   border-radius: 25px;
   gap: 15px;
   border: 1px solid #ced4da;
-`;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 const ExplainBox = styled.div`
   display: flex;
   align-items: center;
@@ -95,10 +116,17 @@ const Bubble = styled.div`
   border-radius: 15px;
   padding: 10px 15px;
   margin-top: 10px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   font-size: 18px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   line-height: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    width: 100%;
+    line-height: 30px;
+  }
 `;
 
 const Arrow = styled.div`
@@ -119,6 +147,9 @@ const TitleBox = styled.div`
   justify-content: center;
   width: 1000px;
   margin-top: 40px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h1`
@@ -136,8 +167,13 @@ const StackBox = styled.div`
   width: 100%;
   padding: 10px 0;
   border-bottom: 1px solid #ced4da;
+
+  @media (max-width: 768px) {
+    padding: 5px 0;
+  }
 `;
 const FooterBox = styled.div`
+  width: 100%;
   height: 100%;
   border-radius: 0 0 25px 25px;
   transition: background-color 0.3s;
@@ -162,7 +198,7 @@ const StackList = styled.span`
 
 const ProjectWrap = styled.div`
   width: 100%;
-  margin: 30px 0 0 70px;
+  margin-top: 20px;
   cursor: pointer;
 `;
 const ProjectBox = styled.div`
@@ -177,6 +213,11 @@ const ProjectBox = styled.div`
   &:hover ${FooterBox} {
     background-color: rgba(135, 131, 120, 0.1);
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 `;
 const ProjectImg = styled.img`
   width: 100%;
@@ -184,6 +225,10 @@ const ProjectImg = styled.img`
   object-fit: fill;
   border-radius: 25px 25px 0 0;
   border-bottom: 1px solid #ced4da;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const ProjectName = styled.div`
   width: 100%;
@@ -232,7 +277,15 @@ const ListLabel = styled.span`
   margin-left: 5px;
 `;
 const FlexBox = styled.div`
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const CertificationsBox = styled.div`
@@ -250,14 +303,29 @@ const DevDescription = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ced4da;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    font-size: 16px;
+    width: 100%;
+  }
 `;
 const LeftDev = styled.div`
   width: 350px;
   font-weight: bold;
   line-height: 30px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
+
 const RightDev = styled.div`
   width: 780px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const ListWrap = styled.ul`
   list-style-type: disc;
@@ -525,7 +593,9 @@ export default function Portfolio() {
         </DevDescription>
         <TitleBox>
           <Title>Certifications</Title>
-        <CertificationsBox>컴퓨터 활용능력 1급 (2023.06.09) </CertificationsBox>
+          <CertificationsBox>
+            컴퓨터 활용능력 1급 (2023.06.09){" "}
+          </CertificationsBox>
         </TitleBox>
       </TitleBox>
       <Modal isOpen={isFantionModalOpen} onClose={closeFantionModal}>

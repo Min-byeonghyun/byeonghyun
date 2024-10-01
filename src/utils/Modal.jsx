@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom'; // React Router 사용
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom"; // React Router 사용
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -20,7 +20,6 @@ const ModalWrapper = styled.div`
 const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   align-items: center;
   position: relative;
   background-color: #ffffff;
@@ -32,6 +31,12 @@ const ModalContent = styled.div`
   max-width: 1000px;
   max-height: 80%;
   overflow-y: auto;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    max-width: 95%;
+    padding: 20px;
+  }
 `;
 
 const CloseButton = styled.button`
@@ -48,22 +53,19 @@ const CloseButton = styled.button`
 `;
 
 const Modal = ({ isOpen, onClose, children }) => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isOpen) {
-   
       navigate(".", { replace: false });
 
       const handlePopState = () => {
-      
         onClose();
       };
 
       window.addEventListener("popstate", handlePopState);
 
       return () => {
-      
         window.removeEventListener("popstate", handlePopState);
       };
     }

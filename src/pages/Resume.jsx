@@ -10,29 +10,51 @@ import CakeIcon from "../icons/CakeIcon";
 import AcademicIcon from "../icons/AcademicIcon";
 import HomeIcon from "../icons/HomeIcon";
 
-
 const IconBox = styled.div`
-  width : 30px;
-  height : 35px;
-  margin-right : 10px;
-`
+  width: 30px;
+  height: 35px;
+  margin-right: 10px;
+
+  @media (max-width: 768px) {
+    width: 25px;
+    height: 30px;
+  }
+`;
 
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 1000px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 10px;
+  }
 `;
+
 const ResumeWrap = styled.h1`
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
+
 const ProfileBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1000px;
   height: 500px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const ProfileImg = styled.img`
@@ -42,31 +64,53 @@ const ProfileImg = styled.img`
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid #ced4da;
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 `;
 
 const ExplainBox = styled.div`
   display: flex;
   width: 500px;
   flex-direction: column;
-
   line-height: 50px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    line-height: 40px;
+    align-items: center;
+  }
 `;
 
 const ProfileExplain = styled.h2`
   font-size: 32px;
   color: #4fd66e;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
+
 const ExplainList = styled.p`
-  display : flex;
-  align-items : center;
+  display: flex;
+  align-items: center;
   font-size: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
   a {
     text-decoration: none;
     transition: color 0.3s;
     color: black;
     &:hover {
-    color: #4fd66e;
-  }
+      color: #4fd66e;
+    }
   }
 `;
 
@@ -77,6 +121,10 @@ const TitleBox = styled.div`
   justify-content: center;
   width: 1000px;
   margin-top: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h1`
@@ -86,14 +134,26 @@ const Title = styled.h1`
   padding: 20px;
   border-bottom: 1px solid black;
   font-size: 36px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    padding: 10px;
+  }
 `;
+
 const Description = styled.span`
   display: flex;
   line-height: 40px;
   width: 100%;
   padding: 20px;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    line-height: 30px;
+    font-size: 16px;
+  }
 `;
+
 const DevDescription = styled.div`
   width: 1000px;
   padding: 20px;
@@ -102,14 +162,30 @@ const DevDescription = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ced4da;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+  }
 `;
+
 const LeftDev = styled.div`
   width: 350px;
   font-weight: bold;
   line-height: 30px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
+
 const RightDev = styled.div`
   width: 780px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const ListWrap = styled.ul`
   list-style-type: disc;
@@ -126,19 +202,32 @@ const SkillsWrapper = styled.div`
   justify-content: space-between;
   width: 1000px;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
 const SkillsCategory = styled.div`
   width: 30%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 `;
 
 const SkillsTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 10px;
   color: #4fd66e;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
-
-
 
 const SkillList = styled.ul`
   list-style-type: disc;
@@ -148,13 +237,25 @@ const SkillList = styled.ul`
 const SkillItem = styled.li`
   font-size: 18px;
   line-height: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 30px;
+  }
 `;
+
 const CertificationsBox = styled.div`
   display: flex;
   line-height: 40px;
   width: 100%;
   padding: 20px;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 10px;
+    line-height: 30px;
+  }
 `;
 
 export default function Resume() {
@@ -165,17 +266,60 @@ export default function Resume() {
         <ProfileImg src="/img/resume.jpg" />
         <ExplainBox>
           <ProfileExplain>Contact</ProfileExplain>
-          <ExplainList><IconBox><CakeIcon/></IconBox> 1999.01.25</ExplainList>
-          <ExplainList><IconBox><HomeIcon/></IconBox> 서울특별시 중랑구</ExplainList>
-          <ExplainList><IconBox><EmailIcon/></IconBox> qudgus5125@naver.com</ExplainList>
-          <ExplainList><IconBox><PhoneIcon/></IconBox> 010-4230-5125</ExplainList>
-          <ExplainList><IconBox><AcademicIcon/></IconBox> 경복대학교 (IT보안과)</ExplainList>
-          <ProfileExplain>Channel</ProfileExplain>
-          <ExplainList><IconBox><BlogIcon/></IconBox> 
-          <Link to="https://velog.io/@min9999/posts" target="_blank" rel="noopener noreferrer">Blog</Link>
+          <ExplainList>
+            <IconBox>
+              <CakeIcon />
+            </IconBox>{" "}
+            1999.01.25
           </ExplainList>
-          <ExplainList><IconBox><GithubIcon/></IconBox> 
-          <Link to="https://github.com/Min-byeonghyun" target="_blank" rel="noopener noreferrer">GitHub</Link>
+          <ExplainList>
+            <IconBox>
+              <HomeIcon />
+            </IconBox>{" "}
+            서울특별시 중랑구
+          </ExplainList>
+          <ExplainList>
+            <IconBox>
+              <EmailIcon />
+            </IconBox>{" "}
+            qudgus5125@naver.com
+          </ExplainList>
+          <ExplainList>
+            <IconBox>
+              <PhoneIcon />
+            </IconBox>{" "}
+            010-4230-5125
+          </ExplainList>
+          <ExplainList>
+            <IconBox>
+              <AcademicIcon />
+            </IconBox>{" "}
+            경복대학교 (IT보안과)
+          </ExplainList>
+          <ProfileExplain>Channel</ProfileExplain>
+          <ExplainList>
+            <IconBox>
+              <BlogIcon />
+            </IconBox>
+            <Link
+              to="https://velog.io/@min9999/posts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Blog
+            </Link>
+          </ExplainList>
+          <ExplainList>
+            <IconBox>
+              <GithubIcon />
+            </IconBox>
+            <Link
+              to="https://github.com/Min-byeonghyun"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </Link>
           </ExplainList>
         </ExplainBox>
       </ProfileBox>

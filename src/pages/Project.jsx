@@ -6,6 +6,13 @@ const ProjectWrap = styled.div`
   width: 1000px;
   padding: 20px;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const ProjectTitleWrap = styled.div`
   display: flex;
@@ -84,12 +91,11 @@ const BoxList = styled.li`
   font-size: 18px;
   line-height: 40px;
   a {
-    
     transition: color 0.3s;
     color: black;
     &:hover {
-    color: #4fd66e;
-  }
+      color: #4fd66e;
+    }
   }
 `;
 
@@ -122,8 +128,24 @@ export default function Project() {
         </BoxLeft>
         <BoxRight>
           <BoxInfo>
-            <BoxList><Link to="https://github.com/Fan-Tion" target="_blank" rel="noopener noreferrer">github.com/Min-byeonghyun/Fan-Tion</Link></BoxList>
-            <BoxList><Link to="https://fan-tion.vercel.app/" target="_blank" rel="noopener noreferrer">fan-tion.vercel.app</Link></BoxList>
+            <BoxList>
+              <Link
+                to="https://github.com/Fan-Tion"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/Min-byeonghyun/Fan-Tion
+              </Link>
+            </BoxList>
+            <BoxList>
+              <Link
+                to="https://fan-tion.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                fan-tion.vercel.app
+              </Link>
+            </BoxList>
           </BoxInfo>
         </BoxRight>
       </Box>
@@ -191,8 +213,24 @@ export default function Project() {
         </BoxLeft>
         <BoxRight>
           <BoxInfo>
-          <BoxList><Link to="https://github.com/Min-byeonghyun/petTalk" target="_blank" rel="noopener noreferrer">github.com/Min-byeonghyun/petTalk</Link></BoxList>
-          <BoxList><Link to="https://everycar-6008d.web.app/" target="_blank" rel="noopener noreferrer">pettalk.com</Link></BoxList>
+            <BoxList>
+              <Link
+                to="https://github.com/Min-byeonghyun/petTalk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/Min-byeonghyun/petTalk
+              </Link>
+            </BoxList>
+            <BoxList>
+              <Link
+                to="https://everycar-6008d.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                pettalk.com
+              </Link>
+            </BoxList>
           </BoxInfo>
         </BoxRight>
       </Box>

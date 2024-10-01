@@ -3,61 +3,55 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
-  width : 100%;
-  height : 70px;
-  display: flex; 
-  align-items: center; 
-  border-bottom : 2px solid #e8e9ec;
-
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #e8e9ec;
 `;
 const Nav = styled.nav`
-  width : 100%;
- 
+  width: 100%;
 `;
 
 const NavList = styled.ul`
   list-style: none;
   display: flex;
-  justify-content : space-between;
-  margin: 0; 
-  padding: 100px; 
-  
+  justify-content: space-between;
+  margin: 0;
+  padding: 100px;
 `;
 
 const NavItem = styled.li`
   display: flex;
-  justify-content: center; 
-  margin: 0 15px; 
+  justify-content: center;
+  margin: 0 15px;
   font-size: 20px;
-  position: relative; 
-  
+  position: relative;
+
   a {
     text-decoration: none;
-    transition: color 0.3s; 
+    transition: color 0.3s;
     color: black;
 
-    
     &:hover {
       color: #4fd66e;
     }
 
-    
     &::after {
-      content: ""; 
-      display: block; 
-      width: 100%; 
-      height: 2px; 
-      background-color: #4fd66e; 
-      position: absolute; 
-      left: 0; 
-      bottom: -5px; 
-      transform: scaleX(0); 
-      transition: transform 0.3s ease; 
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #4fd66e;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
     }
 
-   
     &:hover::after {
-      transform: scaleX(1); 
+      transform: scaleX(1);
     }
   }
 `;
@@ -77,10 +71,22 @@ export default function LayoutHeader() {
             <Link to="/portfolio">Portfolio</Link>
           </NavItem>
           <NavItem>
-          <a href="https://github.com/Min-byeonghyun" target="_blank" rel="noopener noreferrer">Github</a>
+            <a
+              href="https://github.com/Min-byeonghyun"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
           </NavItem>
           <NavItem>
-          <a href="https://velog.io/@min9999/posts" target="_blank" rel="noopener noreferrer">Velog</a>
+            <a
+              href="https://velog.io/@min9999/posts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Velog
+            </a>
           </NavItem>
         </NavList>
       </Nav>
