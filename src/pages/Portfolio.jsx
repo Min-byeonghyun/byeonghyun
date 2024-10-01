@@ -182,6 +182,7 @@ const FooterBox = styled.div`
 const StackItem = styled.div`
   display: flex;
   align-items: center;
+  width : 100%;
 `;
 
 const StackList = styled.span`
@@ -239,8 +240,17 @@ const ProjectDate = styled.div`
   padding: 10px 12px 6px;
 `;
 const ListBox = styled.div`
+  display : flex;
   width: 100%;
   padding: 10px 5px 6px;
+  @media (max-width: 768px) {
+    width: 100%;
+    overflow : hidden;
+  }
+  @media (max-width: 480px) {
+   width : 100%;
+   overflow : hidden;
+  }
 `;
 const ListName = styled.span`
   font-size: 13px;

@@ -8,9 +8,18 @@ const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   border-bottom: 2px solid #e8e9ec;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+   
+  }
 `;
 const Nav = styled.nav`
   width: 100%;
+  
 `;
 
 const NavList = styled.ul`
@@ -19,6 +28,16 @@ const NavList = styled.ul`
   justify-content: space-between;
   margin: 0;
   padding: 100px;
+
+  @media (max-width: 768px) {
+    padding: 50px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const NavItem = styled.li`
@@ -53,6 +72,10 @@ const NavItem = styled.li`
     &:hover::after {
       transform: scaleX(1);
     }
+  }
+
+  @media (max-width: 480px) {
+    margin: 10px 0;
   }
 `;
 
