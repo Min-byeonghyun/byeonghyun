@@ -61,7 +61,7 @@ const Box = styled.div`
   border-bottom: 1px solid #ced4da;
 `;
 const BoxLeft = styled.div`
-  flex: 1;
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -76,20 +76,21 @@ const BoxTitle = styled.h2`
   font-size: 22px;
   font-weight: bold;
   color: ${(props) => (props.color ? props.color : "#4fd66e")};
+  
 `;
 const BoxInfo = styled.ul`
   font-size: 18px;
-  line-height: 30px;
   list-style-type: none;
-  padding-left: 0;
   li::before {
     content: "•";
     margin-right: 8px;
   }
 `;
+
 const BoxList = styled.li`
   font-size: 18px;
   line-height: 40px;
+  
   a {
     transition: color 0.3s;
     color: black;
@@ -186,6 +187,50 @@ export default function Project() {
           </BoxInfo>
         </BoxRight>
       </Box>
+      <Box>
+        <BoxLeft>
+          <BoxTitle>트러블슈팅 및 배운점</BoxTitle>
+        </BoxLeft>
+        <BoxRight>
+          <BoxInfo>
+            <BoxList>
+              코드의 재사용성을 높이기 위해, 효율적으로 컴포넌트를 구성하고, 각
+              컴포넌트 및 함수가 본연의 역할의 충실할 수 있도록 고민하며
+              구현했습니다.
+            </BoxList>
+            <BoxList>
+              프로젝트에서 styled-components를 전역적으로 사용하는 대신, 각
+              컴포넌트 별로 스타일을 분리하여 유지보수성을 높였습니다.
+            </BoxList>
+            <BoxList>
+              페이지를 lazy loading 방식으로 구현하여 초기 로딩 시간을
+              단축시켰고, 컴포넌트를 pages 폴더에 모아두고 index.ts에서
+              효율적으로 관리하였습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              axios 인스턴스를 설정하고, 인터셉터를 통해 API 요청 시 토큰 인증
+              및 데이터 처리 과정을 자동화하여 코드의 일관성과 유지보수성을
+              강화했습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              react-cookie를 사용해 로그인 시 토큰을 쿠키에 저장하여 사용자가
+              인증 정보를 안전하게 관리할 수 있도록 구현했습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              페어 프로그래밍을 통해 팀원과 함께 문제를 해결하며, 코드 품질을
+              향상시키고 다양한 관점에서 접근하는 방법을 배웠습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              Slack, Discord를 통해 매일 팀원과 소통하며 트러블슈팅과 코드리뷰를
+              함께 진행했고, 그 과정에서 커뮤니케이션 스킬을 향상시켰습니다.
+            </BoxList>
+          </BoxInfo>
+        </BoxRight>
+      </Box>
       <ProjectTitleWrap2>
         <ProjectImg2 src="/img/pettalk.png" />
         <ProjectTitle color="#FFC459">
@@ -251,10 +296,27 @@ export default function Project() {
         </BoxLeft>
         <BoxRight>
           <BoxInfo>
-            <BoxList>유저관련 (회원가입, 소셜로그인,마이페이지)</BoxList>
-            <BoxList>카카오 맵 api를 활용한 애견을 위한 장소 찾기 기능</BoxList>
-            <BoxList>게시판 CRUD 기능</BoxList>
+            <BoxList>유저관련 (회원가입, 소셜로그인, 마이페이지)</BoxList>
+            <BoxList>카카오 맵 api를 활용한 애견을 위한 장소 검색 기능 구현</BoxList>
+            <BoxList>게시판 CRUD 기능 구현 </BoxList>
+            <BoxList>게시판 댓글, 좋아요 기능 구현</BoxList>
+           
+            <BoxList>페이지네이션 구현</BoxList>
             <BoxList>Firebase 배포</BoxList>
+          </BoxInfo>
+        </BoxRight>
+      </Box>
+      <Box>
+        <BoxLeft>
+          <BoxTitle color="#FFC459">트러블슈팅 및 배운점</BoxTitle>
+        </BoxLeft>
+        <BoxRight>
+          <BoxInfo>
+            <BoxList>{" "}Firebase를 처음 접하며 온라인 강의를 통해 학습하였고, 프로젝트에 적용하는 과정에서 Firebase Authentication, Firestore 등의 다양한 기능을 익혔습니다.</BoxList>
+            <BoxList>{" "}로그인 기능을 구현할 때 Firebase Authentication을 사용해 사용자 인증을 처리하였고, 이를 통해 인증 시스템을 손쉽게 구축할 수 있었습니다.</BoxList>
+            <BoxList>{" "}카카오맵 API를 활용하여 검색 위치에서 가까운 애견샵이나 애견공원을 찾아주는 기능을 구현하며, 위치 정보를 기반으로 데이터를 처리하고 표시하는 방법을 배웠습니다.</BoxList>
+            <BoxList>{" "}동적 페이지 버튼 생성 문제 처음에는 고정된 버튼을 사용해 페이지를 구현하려 했으나, 사용자가 지정한 총 페이지 수에 맞춰 버튼을 동적으로 생성하는 방법을 찾아 해결했습니다. 이를 통해 다양한 페이지 수에 유연하게 대응할 수 있는 페이지네이션을 구현했습니다.</BoxList>
+            <BoxList>{" "}이전/다음 버튼 비활성화 처리 문제 처음에는 이전과 다음 버튼이 항상 활성화되어 있었지만, 첫 페이지와 마지막 페이지에서 버튼을 비활성화하는 로직을 추가해 사용자 경험을 개선했습니다. disabled 속성을 통해 버튼 클릭을 제어하는 방법을 사용했습니다.</BoxList>
           </BoxInfo>
         </BoxRight>
       </Box>
