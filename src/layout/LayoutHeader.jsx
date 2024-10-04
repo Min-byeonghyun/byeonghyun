@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
@@ -46,11 +46,12 @@ const NavItem = styled.li`
   margin: 0 15px;
   font-size: 20px;
   position: relative;
-
   a {
     text-decoration: none;
     transition: color 0.3s;
-    color: black;
+    color: ${({ active }) => (active ? "#4fd66e" : "black")}; 
+    font-weight: ${({ active }) => (active ? "bold" : "normal")}; 
+    
 
     &:hover {
       color: #4fd66e;
@@ -80,17 +81,19 @@ const NavItem = styled.li`
 `;
 
 export default function LayoutHeader() {
+  const location = useLocation();
+
   return (
     <HeaderContainer>
       <Nav>
         <NavList>
-          <NavItem>
+          <NavItem  active={location.pathname === "/"}>
             <Link to="/">Home</Link>
           </NavItem>
-          <NavItem>
+          <NavItem  active={location.pathname === "/resume"}>
             <Link to="/resume">Resume</Link>
           </NavItem>
-          <NavItem>
+          <NavItem  active={location.pathname === "/portfolio"}>
             <Link to="/portfolio">Portfolio</Link>
           </NavItem>
           <NavItem>
