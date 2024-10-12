@@ -33,7 +33,7 @@ const FooterList = styled.div`
 export default function LayoutFooter() {
   return (
     <Footer>
-      <FooterList>&copy; 2024 byeonghyun Web.</FooterList>
+      <FooterList>&copy; 2024 Minbyeonghyun Web.</FooterList>
     </Footer>
   );
 };
