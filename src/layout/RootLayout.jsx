@@ -4,7 +4,7 @@ import LayoutFooter from './LayoutFooter';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
-// 기존 스타일 적용
+
 const MainContent = styled.main`
   flex-grow: 1;
   width : 100%;
