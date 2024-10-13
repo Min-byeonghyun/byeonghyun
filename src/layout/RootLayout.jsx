@@ -1,9 +1,10 @@
-import React from 'react';
-import LayoutHeader from './LayoutHeader'
+import React, { useState, useEffect } from 'react';
+import LayoutHeader from './LayoutHeader';
 import LayoutFooter from './LayoutFooter';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
+// 기존 스타일 적용
 const MainContent = styled.main`
   flex-grow: 1;
   width : 100%;
@@ -23,15 +24,76 @@ const MainContent = styled.main`
   }
 `;
 
+const ScrollButton = styled.button`
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: opacity 0.7s;
 
-export default function RootLayout () {
+  &:hover {
+    opacity: 1;
+  }
+
+ 
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    bottom: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+`;
+
+export default function RootLayout() {
+  const [isVisible, setIsVisible] = useState(false);
+
+
+  const toggleVisibility = () => {
+    if (window.scrollY  > 300) { 
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' 
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
   return (
     <>
       <LayoutHeader />
       <MainContent>
-        <Outlet /> 
+        <Outlet />
       </MainContent>
       <LayoutFooter />
+      
+     
+      {isVisible && <ScrollButton onClick={scrollToTop}>↑</ScrollButton>}
     </>
   );
-};
+}
