@@ -115,11 +115,11 @@ export default function Project() {
       </ProjectDescription>
       <Box>
         <BoxLeft>
-          <BoxTitle>개인 프로젝트</BoxTitle>
+          <BoxTitle>팀 프로젝트</BoxTitle>
         </BoxLeft>
         <BoxRight>
           <BoxInfo>
-            <BoxList>프론트엔드 / 백엔드 3명 </BoxList>
+            <BoxList>프론트엔드 3명 / 백엔드 3명 </BoxList>
           </BoxInfo>
         </BoxRight>
       </Box>
