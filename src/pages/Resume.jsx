@@ -346,6 +346,44 @@ export default function Resume() {
         </Description>
       </TitleBox>
       <TitleBox>
+        <Title>Projects</Title>
+        <Project />
+      </TitleBox>
+      <TitleBox>
+        <Title>Skills</Title>
+        <SkillsWrapper>
+          <SkillsCategory>
+            <SkillsTitle>Languages</SkillsTitle>
+            <SkillList>
+              <SkillItem>JavaScript</SkillItem>
+              <SkillItem>TypeScript</SkillItem>
+              <SkillItem>HTML</SkillItem>
+              <SkillItem>CSS</SkillItem>
+            </SkillList>
+          </SkillsCategory>
+
+          <SkillsCategory>
+            <SkillsTitle>Frameworks & Libraries</SkillsTitle>
+            <SkillList>
+              <SkillItem>React</SkillItem>
+              <SkillItem>SCSS</SkillItem>
+              <SkillItem>styled-components</SkillItem>
+              <SkillItem>react-router</SkillItem>
+            </SkillList>
+          </SkillsCategory>
+          <SkillsCategory>
+            <SkillsTitle>Tools & Others</SkillsTitle>
+            <SkillList>
+              <SkillItem>Git</SkillItem>
+              <SkillItem>GitHub</SkillItem>
+              <SkillItem>Axios</SkillItem>
+              <SkillItem>Firebase</SkillItem>
+              <SkillItem>AWS</SkillItem>
+            </SkillList>
+          </SkillsCategory>
+        </SkillsWrapper>
+      </TitleBox>
+      <TitleBox>
         <Title>Dev Experience</Title>
         <DevDescription>
           <LeftDev>
@@ -396,44 +434,6 @@ export default function Resume() {
             </ListWrap>
           </RightDev>
         </DevDescription>
-      </TitleBox>
-      <TitleBox>
-        <Title>Skills</Title>
-        <SkillsWrapper>
-          <SkillsCategory>
-            <SkillsTitle>Languages</SkillsTitle>
-            <SkillList>
-              <SkillItem>JavaScript</SkillItem>
-              <SkillItem>TypeScript</SkillItem>
-              <SkillItem>HTML</SkillItem>
-              <SkillItem>CSS</SkillItem>
-            </SkillList>
-          </SkillsCategory>
-
-          <SkillsCategory>
-            <SkillsTitle>Frameworks & Libraries</SkillsTitle>
-            <SkillList>
-              <SkillItem>React</SkillItem>
-              <SkillItem>SCSS</SkillItem>
-              <SkillItem>styled-components</SkillItem>
-              <SkillItem>react-router</SkillItem>
-            </SkillList>
-          </SkillsCategory>
-          <SkillsCategory>
-            <SkillsTitle>Tools & Others</SkillsTitle>
-            <SkillList>
-              <SkillItem>Git</SkillItem>
-              <SkillItem>GitHub</SkillItem>
-              <SkillItem>Axios</SkillItem>
-              <SkillItem>Firebase</SkillItem>
-              <SkillItem>AWS</SkillItem>
-            </SkillList>
-          </SkillsCategory>
-        </SkillsWrapper>
-      </TitleBox>
-      <TitleBox>
-        <Title>Projects</Title>
-        <Project />
       </TitleBox>
       <TitleBox>
         <Title>Certifications</Title>
