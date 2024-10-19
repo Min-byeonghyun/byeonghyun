@@ -508,9 +508,9 @@ export default function Portfolio() {
                 <ProjectName>FAN-TION (팬덤 경매 플랫폼)</ProjectName>
                 <ProjectDate>2024년 6월 24일 ~ 2024년 7월 27일 </ProjectDate>
                 <ListBox>
+                  <ListName>Javascript</ListName>
                   <ListName>React</ListName>
                   <ListName>Typescript</ListName>
-                  <ListName>Socket.io</ListName>
                   <ListName>axios</ListName>
                 </ListBox>
                 <ListLink>
