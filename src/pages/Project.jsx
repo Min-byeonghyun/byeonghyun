@@ -17,13 +17,12 @@ const ProjectWrap = styled.div`
 const ProjectTitleWrap = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 20px;
   gap: 20px;
 `;
 const ProjectTitleWrap2 = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   margin: 30px 0 30px;
 `;
@@ -41,15 +40,24 @@ const ProjectTitle = styled.h2`
   font-size: 28px;
   font-weight: bold;
   color: ${(props) => (props.color ? props.color : "#4fd66e")};
-  margin-bottom: 20px;
-  align-items: center;
+`;
+const SubProjectTitle = styled.h3`
+  font-size: 16px;
+  font-weight: bold;
+  color: #4fd66e;
+`;
+
+const SubProjectTitle2 = styled.h3`
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffc459;
 `;
 const ProjectDescription = styled.h1`
   border: 1px solid #ced4da;
   padding: 20px;
   border-radius: 25px;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.8;
 `;
 
 const Box = styled.div`
@@ -61,7 +69,7 @@ const Box = styled.div`
   border-bottom: 1px solid #ced4da;
 `;
 const BoxLeft = styled.div`
-  flex: 0.8;
+  flex: 0.4;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -73,24 +81,17 @@ const BoxRight = styled.div`
   justify-content: flex-start;
 `;
 const BoxTitle = styled.h2`
-  font-size: 22px;
-  font-weight: bold;
-  color: ${(props) => (props.color ? props.color : "#4fd66e")};
-  
+  font-size: 20px;
 `;
 const BoxInfo = styled.ul`
   font-size: 18px;
-  list-style-type: none;
-  li::before {
-    content: "•";
-    margin-right: 8px;
-  }
+  list-style-type: disc;
 `;
 
 const BoxList = styled.li`
-  font-size: 18px;
-  line-height: 40px;
-  
+  font-size: 16px;
+  line-height: 45px;
+
   a {
     transition: color 0.3s;
     color: black;
@@ -100,12 +101,23 @@ const BoxList = styled.li`
   }
 `;
 
+const FlexBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
 export default function Project() {
   return (
     <ProjectWrap>
       <ProjectTitleWrap>
         <ProjectImg src="/img/mainLogo2.png" />
-        <ProjectTitle>FAN-TION (팬덤 경매 플랫폼)</ProjectTitle>
+        <FlexBox>
+          <ProjectTitle>FAN-TION (팬덤 경매 플랫폼)</ProjectTitle>
+          <SubProjectTitle>
+            팀프로젝트 (프론트 3인 / 백엔드 3인)
+          </SubProjectTitle>
+        </FlexBox>
       </ProjectTitleWrap>
       <ProjectDescription>
         팬들이 경매를 통해 자신이 좋아하는 아이템을 구매할 수 있는 팬덤 경매
@@ -113,16 +125,6 @@ export default function Project() {
         실시간 경매 시스템과 사용자 간 소통 기능을 제공하며, 팬 커뮤니티를
         형성할 수 있도록 기획되었습니다.
       </ProjectDescription>
-      <Box>
-        <BoxLeft>
-          <BoxTitle>팀 프로젝트</BoxTitle>
-        </BoxLeft>
-        <BoxRight>
-          <BoxInfo>
-            <BoxList>프론트엔드 3명 / 백엔드 3명 </BoxList>
-          </BoxInfo>
-        </BoxRight>
-      </Box>
       <Box>
         <BoxLeft>
           <BoxTitle>프로젝트 결과물</BoxTitle>
@@ -233,25 +235,18 @@ export default function Project() {
       </Box>
       <ProjectTitleWrap2>
         <ProjectImg2 src="/img/pettalk.png" />
-        <ProjectTitle color="#FFC459">
-          PetTalk (애견 커뮤니티 플랫폼)
-        </ProjectTitle>
+        <FlexBox>
+          <ProjectTitle color="#FFC459">
+            PetTalk (애견 커뮤니티 플랫폼)
+          </ProjectTitle>
+          <SubProjectTitle2>개인프로젝트</SubProjectTitle2>
+        </FlexBox>
       </ProjectTitleWrap2>
       <ProjectDescription>
         애견 커뮤니티 펫톡(PetTalk) 애견인들이 강아지와 함께 하는 일상을
         공유하고, <br />
         애견 관련 정보를 얻어갈 수 있는 종합 커뮤니티
       </ProjectDescription>
-      <Box>
-        <BoxLeft>
-          <BoxTitle color="#FFC459">개인 프로젝트</BoxTitle>
-        </BoxLeft>
-        <BoxRight>
-          <BoxInfo>
-            <BoxList>프론트엔드 1명 </BoxList>
-          </BoxInfo>
-        </BoxRight>
-      </Box>
       <Box>
         <BoxLeft>
           <BoxTitle color="#FFC459">프로젝트 결과물</BoxTitle>
@@ -297,10 +292,12 @@ export default function Project() {
         <BoxRight>
           <BoxInfo>
             <BoxList>유저관련 (회원가입, 소셜로그인, 마이페이지)</BoxList>
-            <BoxList>카카오 맵 api를 활용한 애견을 위한 장소 검색 기능 구현</BoxList>
+            <BoxList>
+              카카오 맵 api를 활용한 애견을 위한 장소 검색 기능 구현
+            </BoxList>
             <BoxList>게시판 CRUD 기능 구현 </BoxList>
             <BoxList>게시판 댓글, 좋아요 기능 구현</BoxList>
-           
+
             <BoxList>페이지네이션 구현</BoxList>
             <BoxList>Firebase 배포</BoxList>
           </BoxInfo>
@@ -312,11 +309,38 @@ export default function Project() {
         </BoxLeft>
         <BoxRight>
           <BoxInfo>
-            <BoxList>{" "}Firebase를 처음 접하며 온라인 강의를 통해 학습하였고, 프로젝트에 적용하는 과정에서 Firebase Authentication, Firestore 등의 다양한 기능을 익혔습니다.</BoxList>
-            <BoxList>{" "}로그인 기능을 구현할 때 Firebase Authentication을 사용해 사용자 인증을 처리하였고, 이를 통해 인증 시스템을 손쉽게 구축할 수 있었습니다.</BoxList>
-            <BoxList>{" "}카카오맵 API를 활용하여 검색 위치에서 가까운 애견샵이나 애견공원을 찾아주는 기능을 구현하며, 위치 정보를 기반으로 데이터를 처리하고 표시하는 방법을 배웠습니다.</BoxList>
-            <BoxList>{" "}동적 페이지 버튼 생성 문제 처음에는 고정된 버튼을 사용해 페이지를 구현하려 했으나, 사용자가 지정한 총 페이지 수에 맞춰 버튼을 동적으로 생성하는 방법을 찾아 해결했습니다. 이를 통해 다양한 페이지 수에 유연하게 대응할 수 있는 페이지네이션을 구현했습니다.</BoxList>
-            <BoxList>{" "}이전/다음 버튼 비활성화 처리 문제 처음에는 이전과 다음 버튼이 항상 활성화되어 있었지만, 첫 페이지와 마지막 페이지에서 버튼을 비활성화하는 로직을 추가해 사용자 경험을 개선했습니다. disabled 속성을 통해 버튼 클릭을 제어하는 방법을 사용했습니다.</BoxList>
+            <BoxList>
+              {" "}
+              Firebase를 처음 접하며 온라인 강의를 통해 학습하였고, 프로젝트에
+              적용하는 과정에서 Firebase Authentication, Firestore 등의 다양한
+              기능을 익혔습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              로그인 기능을 구현할 때 Firebase Authentication을 사용해 사용자
+              인증을 처리하였고, 이를 통해 인증 시스템을 손쉽게 구축할 수
+              있었습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              카카오맵 API를 활용하여 검색 위치에서 가까운 애견샵이나 애견공원을
+              찾아주는 기능을 구현하며, 위치 정보를 기반으로 데이터를 처리하고
+              표시하는 방법을 배웠습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              동적 페이지 버튼 생성 문제 처음에는 고정된 버튼을 사용해 페이지를
+              구현하려 했으나, 사용자가 지정한 총 페이지 수에 맞춰 버튼을
+              동적으로 생성하는 방법을 찾아 해결했습니다. 이를 통해 다양한
+              페이지 수에 유연하게 대응할 수 있는 페이지네이션을 구현했습니다.
+            </BoxList>
+            <BoxList>
+              {" "}
+              이전/다음 버튼 비활성화 처리 문제 처음에는 이전과 다음 버튼이 항상
+              활성화되어 있었지만, 첫 페이지와 마지막 페이지에서 버튼을
+              비활성화하는 로직을 추가해 사용자 경험을 개선했습니다. disabled
+              속성을 통해 버튼 클릭을 제어하는 방법을 사용했습니다.
+            </BoxList>
           </BoxInfo>
         </BoxRight>
       </Box>

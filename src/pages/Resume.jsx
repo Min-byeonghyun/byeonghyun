@@ -172,8 +172,9 @@ const DevDescription = styled.div`
 
 const LeftDev = styled.div`
   width: 350px;
-  font-weight: bold;
+
   line-height: 30px;
+  font-size: 18px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -193,7 +194,7 @@ const ListWrap = styled.ul`
 `;
 
 const List = styled.li`
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px;
 `;
 
