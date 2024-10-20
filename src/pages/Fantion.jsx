@@ -266,7 +266,7 @@ export default function Fantion() {
             코드 작성
           </InfoList>
         </BoxInfo>
-        <Myfunction>내가 구현한 기능</Myfunction>
+        <Myfunction>내가 구현한 기능 영상</Myfunction>
         <MyInfoBox>
           <ImgWrap>
             <MyImg src="/img/login.gif" />
