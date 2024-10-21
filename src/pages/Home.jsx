@@ -182,7 +182,7 @@ const Home = () => {
         <MyImg src="/img/byeonghyun.jpg" />
         <NameBox>
           <MyName>민병현</MyName>
-          <MyName2>Frontend Developer.</MyName2>
+          <MyName2>Frontend Developer</MyName2>
         </NameBox>
       </ImgBox>
       <ExplainBox>
