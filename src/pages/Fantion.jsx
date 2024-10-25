@@ -90,7 +90,6 @@ const BoxInfo = styled.ul`
   line-height: 30px;
   list-style-type: disc;
   padding-left: 0;
-
 `;
 const InfoList = styled.li`
   font-size: 16px;
@@ -130,33 +129,7 @@ const Myfunction = styled.h1`
 
   margin-top: 30px;
 `;
-const Collaboration = styled.div`
-  line-height: 30px;
-  margin-top: 20px;
-  font-size: 20px;
 
-  padding-top: 20px;
-`;
-const ProcessBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const Process = styled.div`
-  padding: 20px;
-  margin-top: 20px;
-  font-size: 18px;
-  line-height: 30px;
-`;
-
-const GitHubStrategy = styled.div`
-  line-height: 40px;
-  margin-top: 20px;
-  font-size: 18px;
-  padding-bottom: 20px;
-`;
 const LinkBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -219,10 +192,12 @@ export default function Fantion() {
         <InfoName>프로젝트 소개</InfoName>
         <BoxInfo>
           <InfoList>
-            Fan-Tion은 팬들이 경매를 통해 자신이 좋아하는 아이템을 구매할 수 있는 팬덤 경매 커뮤니티 플랫폼입니다. 
+            Fan-Tion은 팬들이 경매를 통해 자신이 좋아하는 아이템을 구매할 수
+            있는 팬덤 경매 커뮤니티 플랫폼입니다.
           </InfoList>
           <InfoList>
-          실시간 경매 시스템과 사용자 간 소통 기능을 제공하며, 팬 커뮤니티를 형성할 수 있도록 기획되었습니다.
+            실시간 경매 시스템과 사용자 간 소통 기능을 제공하며, 팬 커뮤니티를
+            형성할 수 있도록 기획되었습니다.
           </InfoList>
           <InfoList>
             주 타겟은 아이돌팬덤, 영화 , 애니메이션의 팬 등 서브컬쳐를 즐기는
@@ -235,92 +210,98 @@ export default function Fantion() {
         <InfoName>내가 기여한 부분</InfoName>
         <BoxInfo>
           <InfoList>
-          로그인 및 회원가입 기능 개발:
-          <BoxSub>
-                - 회원가입 시 이메일 중복 체크 및 프로필 이미지 설정 기능 구현,
-              </BoxSub>
-              <BoxSub>
-                - Daum 우편번호 서비스 API를 활용한 주소 검색 기능 개발
-              </BoxSub>
-          </InfoList>
-          <InfoList>커뮤니티 채널 게시글 페이지 개발 :
-          <BoxSub>
-                - 커뮤니티 채널 생성 및 게시글 리스트 받아오는 기능 개발
-              </BoxSub>
-              <BoxSub>
-                - 많은 게시글을 효율적으로 보여주기 위해 페이지네이션을 적용하여
-                성능 최적화
-              </BoxSub>
-          </InfoList>
-          <InfoList> 프로필 페이지 개발 :
-          <BoxSub>
-                - 사용자의 닉네임, 전화번호, 이메일, 배송지 정보를 불러와 화면에
-                표시
-              </BoxSub>
-              <BoxSub>
-                - 프로필 정보 수정 및 저장 기능 구현, 사용자 경험을 고려한 UI
-                설계
-              </BoxSub>
-          </InfoList>
-          <InfoList>검색 기능 개발:
-          <BoxSub>
-                - 경매 물품, 커뮤니티 제목, 작성자에 따른 검색 기능 구현,
-              </BoxSub>
-              <BoxSub>- 카테고리 리스트를 받아오는 기능 개발</BoxSub>
-          </InfoList>
-          <InfoList>네트워크 요청 모듈화 :
-          <BoxSub>
-                - axios 인터셉터 인스턴스를 활용하여 네트워크 요청을 모듈화하고,
-                유지보수성 향상
-              </BoxSub>
-          </InfoList>
-          <InfoList>테스트 코드 작성 :
-          <BoxSub>
-                - msw를 사용하여 백엔드 서버 배포 전 mock 데이터를 활용한 테스트
-                코드 작성
-              </BoxSub>
-          </InfoList>
-          <InfoList>경매 실시간 구독 기능 :
-          <BoxSub>
-                - EventSource를 사용하여 경매 진행 시 실시간으로 구매자의
-                닉네임과 가격이 업데이트되는 기능 개발
-              </BoxSub>
+            로그인 및 회원가입 기능 개발:
+            <BoxSub>
+              - 회원가입 시 이메일 중복 체크 및 프로필 이미지 설정 기능 구현,
+            </BoxSub>
+            <BoxSub>
+              - Daum 우편번호 서비스 API를 활용한 주소 검색 기능 개발
+            </BoxSub>
           </InfoList>
           <InfoList>
-          UI 개발 :
-          <BoxSub>
-                - 전체적인 UI의 약 70% 작업, styled-components를 사용해 일관된
-                디자인 적용
-              </BoxSub>
+            커뮤니티 채널 게시글 페이지 개발 :
+            <BoxSub>
+              - 커뮤니티 채널 생성 및 게시글 리스트 받아오는 기능 개발
+            </BoxSub>
+            <BoxSub>
+              - 많은 게시글을 효율적으로 보여주기 위해 페이지네이션을 적용하여
+              성능 최적화
+            </BoxSub>
           </InfoList>
           <InfoList>
-          협업 및 관리 :
-          <BoxSub>
-                - Slack과 Discord를 사용해 팀원들과 매일 1시간씩 회의를 진행하며
-                소통
-              </BoxSub>
-              <BoxSub>
-                - 트러블슈팅 시 Notion에 이슈를 기록하고, Discord및 Slack에서
-                팀원들과 함께 해결
-              </BoxSub>
-              <BoxSub>
-                - 프로젝트 마지막 단계에서 QA 진행, 문제를 Slack 스레드에 정리해
-                팀원들과 해결
-              </BoxSub>
+            {" "}
+            프로필 페이지 개발 :
+            <BoxSub>
+              - 사용자의 닉네임, 전화번호, 이메일, 배송지 정보를 불러와 화면에
+              표시
+            </BoxSub>
+            <BoxSub>
+              - 프로필 정보 수정 및 저장 기능 구현, 사용자 경험을 고려한 UI 설계
+            </BoxSub>
           </InfoList>
           <InfoList>
-          협업 프로세스 :
-          <BoxSub>
-                - GitHub 브랜치 전략을 사용하여 Main과 Dev 브랜치로 나눠 개발
-              </BoxSub>
-              <BoxSub>
-                - 각자 로컬 브랜치에서 작업 후 PR을 생성하여 Dev 브랜치에 머지,
-                문제없을 시 Main 브랜치로 머지
-              </BoxSub>
-              <BoxSub>
-                - PR 시 Slack에 내용을 공유하여 모든 팀원이 진행 상황을 파악하고
-                피드백을 주고받음
-              </BoxSub>
+            검색 기능 개발:
+            <BoxSub>
+              - 경매 물품, 커뮤니티 제목, 작성자에 따른 검색 기능 구현,
+            </BoxSub>
+            <BoxSub>- 카테고리 리스트를 받아오는 기능 개발</BoxSub>
+          </InfoList>
+          <InfoList>
+            네트워크 요청 모듈화 :
+            <BoxSub>
+              - axios 인터셉터 인스턴스를 활용하여 네트워크 요청을 모듈화하고,
+              유지보수성 향상
+            </BoxSub>
+          </InfoList>
+          <InfoList>
+            테스트 코드 작성 :
+            <BoxSub>
+              - msw를 사용하여 백엔드 서버 배포 전 mock 데이터를 활용한 테스트
+              코드 작성
+            </BoxSub>
+          </InfoList>
+          <InfoList>
+            경매 실시간 구독 기능 :
+            <BoxSub>
+              - EventSource를 사용하여 경매 진행 시 실시간으로 구매자의 닉네임과
+              가격이 업데이트되는 기능 개발
+            </BoxSub>
+          </InfoList>
+          <InfoList>
+            UI 개발 :
+            <BoxSub>
+              - 전체적인 UI의 약 70% 작업, styled-components를 사용해 일관된
+              디자인 적용
+            </BoxSub>
+          </InfoList>
+          <InfoList>
+            협업 및 관리 :
+            <BoxSub>
+              - Slack과 Discord를 사용해 팀원들과 매일 1시간씩 회의를 진행하며
+              소통
+            </BoxSub>
+            <BoxSub>
+              - 트러블슈팅 시 Notion에 이슈를 기록하고, Discord및 Slack에서
+              팀원들과 함께 해결
+            </BoxSub>
+            <BoxSub>
+              - 프로젝트 마지막 단계에서 QA 진행, 문제를 Slack 스레드에 정리해
+              팀원들과 해결
+            </BoxSub>
+          </InfoList>
+          <InfoList>
+            협업 프로세스 :
+            <BoxSub>
+              - GitHub 브랜치 전략을 사용하여 Main과 Dev 브랜치로 나눠 개발
+            </BoxSub>
+            <BoxSub>
+              - 각자 로컬 브랜치에서 작업 후 PR을 생성하여 Dev 브랜치에 머지,
+              문제없을 시 Main 브랜치로 머지
+            </BoxSub>
+            <BoxSub>
+              - PR 시 Slack에 내용을 공유하여 모든 팀원이 진행 상황을 파악하고
+              피드백을 주고받음
+            </BoxSub>
           </InfoList>
         </BoxInfo>
         <Myfunction>내가 구현한 기능 영상</Myfunction>
@@ -375,7 +356,7 @@ export default function Fantion() {
           </ImgWrap>
         </MyInfoBox>
       </ProjectInfo>
-     
+
       <VideoEmbed />
       <VideoEmbed2 />
       <ProjectInfo>
