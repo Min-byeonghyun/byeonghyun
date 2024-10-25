@@ -63,13 +63,13 @@ const ProjectDescription = styled.h1`
 const Box = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
+  flex-direction: column;
   width: 100%;
   padding: 30px;
   border-bottom: 1px solid #ced4da;
 `;
 const BoxLeft = styled.div`
-  flex: 0.4;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -82,15 +82,17 @@ const BoxRight = styled.div`
 `;
 const BoxTitle = styled.h2`
   font-size: 20px;
+  font-weight: bold;
+  height: 40px;
 `;
 const BoxInfo = styled.ul`
-  font-size: 18px;
   list-style-type: disc;
 `;
 
 const BoxList = styled.li`
   font-size: 16px;
-  line-height: 45px;
+  line-height: 43px;
+  font-weight: normal;
 
   a {
     transition: color 0.3s;
@@ -99,6 +101,15 @@ const BoxList = styled.li`
       color: #4fd66e;
     }
   }
+`;
+const BoxMain = styled.li`
+  font-size: 18px;
+  line-height: 43px;
+  font-weight: bold;
+`;
+const BoxSub = styled.p`
+  font-size: 16px;
+  font-weight: normal;
 `;
 
 const FlexBox = styled.div`
@@ -160,7 +171,7 @@ export default function Project() {
           <BoxInfo>
             <BoxList>Javascript, Typescript , React</BoxList>
             <BoxList>styled-components, react-Router, ToastUI</BoxList>
-            <BoxList>MSW, socket.io , vercel </BoxList>
+            <BoxList>MSW, vercel </BoxList>
           </BoxInfo>
         </BoxRight>
       </Box>
@@ -170,22 +181,101 @@ export default function Project() {
         </BoxLeft>
         <BoxRight>
           <BoxInfo>
-            <BoxList>
-              유저관련 (회원가입, 소셜로그인(연동기능),마이페이지)
-            </BoxList>
-            <BoxList>검색기능 (경매검색,커뮤니티 검색기능)</BoxList>
-            <BoxList>커뮤니티 채널생성 페이지</BoxList>
-            <BoxList>커뮤니티 채널 페이지 , 게시글페이지, 게시판페이지</BoxList>
-            <BoxList>경매 실시간 구독기능 개발</BoxList>
-            <BoxList>Daum 우편번호 서비스 기능 </BoxList>
-            <BoxList>인기카테고리 리스트 UI/UX</BoxList>
-            <BoxList>
-              axios의 인터셉터, 인스턴스를 활용하여 네트워크 요청 모듈화
-            </BoxList>
-            <BoxList>
-              MSW를 활용하여 Mock 데이터를 사용해 백엔드 서버 배포되기전 테스트
-              코드 작성
-            </BoxList>
+            <BoxMain>
+              로그인 및 회원가입 기능 개발:
+              <BoxSub>
+                - 회원가입 시 이메일 중복 체크 및 프로필 이미지 설정 기능 구현,
+              </BoxSub>
+              <BoxSub>
+                - Daum 우편번호 서비스 API를 활용한 주소 검색 기능 개발
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              커뮤니티 채널 게시글 페이지 개발 :
+              <BoxSub>
+                - 커뮤니티 채널 생성 및 게시글 리스트 받아오는 기능 개발
+              </BoxSub>
+              <BoxSub>
+                - 많은 게시글을 효율적으로 보여주기 위해 페이지네이션을 적용하여
+                성능 최적화
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              {" "}
+              프로필 페이지 개발 :
+              <BoxSub>
+                - 사용자의 닉네임, 전화번호, 이메일, 배송지 정보를 불러와 화면에
+                표시
+              </BoxSub>
+              <BoxSub>
+                - 프로필 정보 수정 및 저장 기능 구현, 사용자 경험을 고려한 UI
+                설계
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              검색 기능 개발:
+              <BoxSub>
+                - 경매 물품, 커뮤니티 제목, 작성자에 따른 검색 기능 구현,
+              </BoxSub>
+              <BoxSub>- 카테고리 리스트를 받아오는 기능 개발</BoxSub>
+            </BoxMain>
+            <BoxMain>
+              네트워크 요청 모듈화 :
+              <BoxSub>
+                - axios 인터셉터 인스턴스를 활용하여 네트워크 요청을 모듈화하고,
+                유지보수성 향상
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              테스트 코드 작성 :
+              <BoxSub>
+                - msw를 사용하여 백엔드 서버 배포 전 mock 데이터를 활용한 테스트
+                코드 작성
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              경매 실시간 구독 기능 :
+              <BoxSub>
+                - EventSource를 사용하여 경매 진행 시 실시간으로 구매자의
+                닉네임과 가격이 업데이트되는 기능 개발
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              UI 개발 :
+              <BoxSub>
+                - 전체적인 UI의 약 70% 작업, styled-components를 사용해 일관된
+                디자인 적용
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              협업 및 관리 :
+              <BoxSub>
+                - Slack과 Discord를 사용해 팀원들과 매일 1시간씩 회의를 진행하며
+                소통
+              </BoxSub>
+              <BoxSub>
+                - 트러블슈팅 시 Notion에 이슈를 기록하고, Discord및 Slack에서
+                팀원들과 함께 해결
+              </BoxSub>
+              <BoxSub>
+                - 프로젝트 마지막 단계에서 QA 진행, 문제를 Slack 스레드에 정리해
+                팀원들과 해결
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              협업 프로세스 :
+              <BoxSub>
+                - GitHub 브랜치 전략을 사용하여 Main과 Dev 브랜치로 나눠 개발
+              </BoxSub>
+              <BoxSub>
+                - 각자 로컬 브랜치에서 작업 후 PR을 생성하여 Dev 브랜치에 머지,
+                문제없을 시 Main 브랜치로 머지
+              </BoxSub>
+              <BoxSub>
+                - PR 시 Slack에 내용을 공유하여 모든 팀원이 진행 상황을 파악하고
+                피드백을 주고받음
+              </BoxSub>
+            </BoxMain>
           </BoxInfo>
         </BoxRight>
       </Box>
@@ -291,15 +381,46 @@ export default function Project() {
         </BoxLeft>
         <BoxRight>
           <BoxInfo>
-            <BoxList>유저관련 (회원가입, 소셜로그인, 마이페이지)</BoxList>
-            <BoxList>
-              카카오 맵 api를 활용한 애견을 위한 장소 검색 기능 구현
-            </BoxList>
-            <BoxList>게시판 CRUD 기능 구현 </BoxList>
-            <BoxList>게시판 댓글, 좋아요 기능 구현</BoxList>
+            <BoxMain>
+              유저 관리 기능 :
+              <BoxSub>
+                - Firebase Authentication을 활용하여 회원가입, 로그인, 소셜
+                로그인 ( 구글, 깃헙) 을 구현
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              애견 지도 개발 :
+              <BoxSub>
+                - kakao 맵 API를 활용해 내 위치를 검색창에 검색할 시 내 위치에서
+                가까운 애견 공원 및 애견 샵 등을 지도에 표시하는 기능 구현{" "}
+              </BoxSub>
+            </BoxMain>
+            <BoxMain>
+              커뮤니티 기능 :
+              <BoxSub>- 커뮤니티 글 작성 및 댓글 작성 기능 구현</BoxSub>
+              <BoxSub>
+                - Firebase Firestore를 사용해 커뮤니티 글과 댓글을 안전하게
+                저장하고 실시간으로 관리
+              </BoxSub>
+              <BoxSub>
+                - 커뮤니티 글에 대한 좋아요 기능, 댓글 수정 및 삭제 기능 구현{" "}
+              </BoxSub>
+              <BoxSub>- 커뮤니티 게시판 페이지네이션 기능 구현</BoxSub>
+            </BoxMain>
+            <BoxMain>
+              마이페이지 :
+              <BoxSub>
+                - 사용자 닉네임 수정 , 내 게시글 조회 및 수정 삭제 기능 구현
+              </BoxSub>
+            </BoxMain>
 
-            <BoxList>페이지네이션 구현</BoxList>
-            <BoxList>Firebase 배포</BoxList>
+            <BoxMain>
+              배포 :
+              <BoxSub>
+                - Firebase Hosting을 사용하여 프로젝트를 배포하고, 사용자들이
+                안정적으로 서비스를 이용할 수 있도록 설정.
+              </BoxSub>
+            </BoxMain>
           </BoxInfo>
         </BoxRight>
       </Box>
