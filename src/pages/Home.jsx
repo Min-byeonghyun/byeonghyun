@@ -65,6 +65,8 @@ const MyImg = styled.img`
 `;
 
 const ExplainBox = styled.div`
+  display : flex;
+  justify-content : center;
   margin-top: 50px;
   width: 900px;
   border: 1px solid #ced4da;
@@ -187,14 +189,7 @@ const Home = () => {
       </ImgBox>
       <ExplainBox>
         <Explain>
-          안녕하세요 프론트엔드 개발자 민병현입니다.
-          <br />
-          새로운 것을 배우고 도전하는 것을 좋아합니다.<br />
-          관심이 생기면 곧바로 실천에 옮기며, 이러한 열정이 웹 개발에 대한
-          관심으로 이어졌습니다.
-          <br />
-          다양한 도전과 경험을 통해 여러 기술 스택을 쌓아 최고의 UI/UX를
-          제공할 수 있는 프론트엔드 개발자로 성장하고 싶습니다.
+          안녕하세요 사용자 경험을 최우선으로 생각하며, <br/>협업을 통해 문제를 해결하고, 지속적으로 성장하고자 하는 프론트엔드 개발자 민병현입니다.
         </Explain>
       </ExplainBox>
       <MainBox>
