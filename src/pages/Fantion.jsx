@@ -88,16 +88,18 @@ const BoxInfo = styled.ul`
   margin-top: 15px;
   font-size: 18px;
   line-height: 30px;
-  list-style-type: none;
+  list-style-type: disc;
   padding-left: 0;
-  li::before {
-    content: "•";
-    margin-right: 8px;
-  }
+
 `;
 const InfoList = styled.li`
   font-size: 16px;
   line-height: 50px;
+`;
+
+const BoxSub = styled.p`
+  font-size: 16px;
+  font-weight: normal;
 `;
 const Team = styled.div`
   padding: 30px;
@@ -217,53 +219,108 @@ export default function Fantion() {
         <InfoName>프로젝트 소개</InfoName>
         <BoxInfo>
           <InfoList>
-            Fan-Tion은 유저에게 경매와 커뮤니티 서비스를 제공하는 플랫폼입니다.
+            Fan-Tion은 팬들이 경매를 통해 자신이 좋아하는 아이템을 구매할 수 있는 팬덤 경매 커뮤니티 플랫폼입니다. 
+          </InfoList>
+          <InfoList>
+          실시간 경매 시스템과 사용자 간 소통 기능을 제공하며, 팬 커뮤니티를 형성할 수 있도록 기획되었습니다.
           </InfoList>
           <InfoList>
             주 타겟은 아이돌팬덤, 영화 , 애니메이션의 팬 등 서브컬쳐를 즐기는
             사용자를 대상으로 한 서비스 입니다.
           </InfoList>
-          <InfoList>
-            일반 상품은 중고 거래 시 가격대가 원가격을 기준으로 형성되지만,
-            서브컬처의 굿즈는 가격 책정이 어렵습니다.
-          </InfoList>
-          <InfoList>
-            Fan-Tion은 경매 시스템을 통해 이 문제를 해결하고, 최근 경매 이력을
-            제공하여 사용자에게 편의를 제공합니다.
-          </InfoList>
-          <InfoList>
-            커뮤니티 서비스를 통해 유저의 플랫폼 체류 시간을 늘리고, 경매
-            서비스의 재이용률을 높이는 효과를 기대합니다.
-          </InfoList>
-          <InfoList>
-            이 플랫폼은 커뮤니티를 제공하여 각 채널에 맞는 유저들끼리 이야기 할
-            수 있는 공간을 제공합니다.
-          </InfoList>
-          <InfoList>
-            이를 통해 각 팬덤 구성원이 더 큰 소속감을 느끼고, 공정한 가격으로
-            원하는 굿즈를 손에 넣을 수 있습니다.
-          </InfoList>
         </BoxInfo>
-        <Team>구성원 : 프론트엔드 / 백엔드 3명</Team>
+        <Team>구성원 : 프론트엔드 3명 / 백엔드 3명</Team>
       </ProjectInfo>
       <ProjectInfo>
         <InfoName>내가 기여한 부분</InfoName>
         <BoxInfo>
           <InfoList>
-            유저관련 (회원가입, 소셜로그인(연동기능),마이페이지)
+          로그인 및 회원가입 기능 개발:
+          <BoxSub>
+                - 회원가입 시 이메일 중복 체크 및 프로필 이미지 설정 기능 구현,
+              </BoxSub>
+              <BoxSub>
+                - Daum 우편번호 서비스 API를 활용한 주소 검색 기능 개발
+              </BoxSub>
           </InfoList>
-          <InfoList>검색기능 (경매검색,커뮤니티 검색기능)</InfoList>
-          <InfoList>커뮤니티 채널생성 페이지</InfoList>
-          <InfoList>커뮤니티 채널 페이지 , 게시글페이지, 게시판페이지</InfoList>
-          <InfoList>경매 실시간 구독기능 개발</InfoList>
-          <InfoList>Daum 우편번호 서비스 기능</InfoList>
-          <InfoList>인기카테고리 리스트 UI/UX</InfoList>
-          <InfoList>
-            axios의 인터셉터, 인스턴스를 활용하여 네트워크 요청 모듈화
+          <InfoList>커뮤니티 채널 게시글 페이지 개발 :
+          <BoxSub>
+                - 커뮤니티 채널 생성 및 게시글 리스트 받아오는 기능 개발
+              </BoxSub>
+              <BoxSub>
+                - 많은 게시글을 효율적으로 보여주기 위해 페이지네이션을 적용하여
+                성능 최적화
+              </BoxSub>
+          </InfoList>
+          <InfoList> 프로필 페이지 개발 :
+          <BoxSub>
+                - 사용자의 닉네임, 전화번호, 이메일, 배송지 정보를 불러와 화면에
+                표시
+              </BoxSub>
+              <BoxSub>
+                - 프로필 정보 수정 및 저장 기능 구현, 사용자 경험을 고려한 UI
+                설계
+              </BoxSub>
+          </InfoList>
+          <InfoList>검색 기능 개발:
+          <BoxSub>
+                - 경매 물품, 커뮤니티 제목, 작성자에 따른 검색 기능 구현,
+              </BoxSub>
+              <BoxSub>- 카테고리 리스트를 받아오는 기능 개발</BoxSub>
+          </InfoList>
+          <InfoList>네트워크 요청 모듈화 :
+          <BoxSub>
+                - axios 인터셉터 인스턴스를 활용하여 네트워크 요청을 모듈화하고,
+                유지보수성 향상
+              </BoxSub>
+          </InfoList>
+          <InfoList>테스트 코드 작성 :
+          <BoxSub>
+                - msw를 사용하여 백엔드 서버 배포 전 mock 데이터를 활용한 테스트
+                코드 작성
+              </BoxSub>
+          </InfoList>
+          <InfoList>경매 실시간 구독 기능 :
+          <BoxSub>
+                - EventSource를 사용하여 경매 진행 시 실시간으로 구매자의
+                닉네임과 가격이 업데이트되는 기능 개발
+              </BoxSub>
           </InfoList>
           <InfoList>
-            MSW를 활용하여 Mock 데이터를 사용해 백엔드 서버 배포되기전 테스트
-            코드 작성
+          UI 개발 :
+          <BoxSub>
+                - 전체적인 UI의 약 70% 작업, styled-components를 사용해 일관된
+                디자인 적용
+              </BoxSub>
+          </InfoList>
+          <InfoList>
+          협업 및 관리 :
+          <BoxSub>
+                - Slack과 Discord를 사용해 팀원들과 매일 1시간씩 회의를 진행하며
+                소통
+              </BoxSub>
+              <BoxSub>
+                - 트러블슈팅 시 Notion에 이슈를 기록하고, Discord및 Slack에서
+                팀원들과 함께 해결
+              </BoxSub>
+              <BoxSub>
+                - 프로젝트 마지막 단계에서 QA 진행, 문제를 Slack 스레드에 정리해
+                팀원들과 해결
+              </BoxSub>
+          </InfoList>
+          <InfoList>
+          협업 프로세스 :
+          <BoxSub>
+                - GitHub 브랜치 전략을 사용하여 Main과 Dev 브랜치로 나눠 개발
+              </BoxSub>
+              <BoxSub>
+                - 각자 로컬 브랜치에서 작업 후 PR을 생성하여 Dev 브랜치에 머지,
+                문제없을 시 Main 브랜치로 머지
+              </BoxSub>
+              <BoxSub>
+                - PR 시 Slack에 내용을 공유하여 모든 팀원이 진행 상황을 파악하고
+                피드백을 주고받음
+              </BoxSub>
           </InfoList>
         </BoxInfo>
         <Myfunction>내가 구현한 기능 영상</Myfunction>
@@ -318,33 +375,7 @@ export default function Fantion() {
           </ImgWrap>
         </MyInfoBox>
       </ProjectInfo>
-      <ProjectInfo>
-        <InfoName>프로젝트 협업 방식</InfoName>
-        <Collaboration>
-          Notion과 Discord를 활용하여 소통하고, 프로젝트 기간 동안 매일 30분
-          이상 팀원과 미팅을 진행하였습니다. <br />
-          <br />
-          팀원들의 진행 상황을 매일 공유하며, 트러블슈팅이 생기면 Notion에
-          공유하거나 Discord에서 함께 논의해 해결했습니다. <br />
-        </Collaboration>
-        <ProcessBox>
-          <Process>
-            - 프로젝트 마지막 단계에서 Notion을 이용해 QA를 진행하여 문제를
-            스레드에 모아서 다 같이 해결했습니다.
-          </Process>
-        </ProcessBox>
-      </ProjectInfo>
-      <ProjectInfo>
-        <InfoName>GitHub 브랜치 전략</InfoName>
-        <GitHubStrategy>
-          1. 로컬 브랜치에서 지속적으로 작업을 진행. <br />
-          2. 작업 완료 후 Remote Repository(Github)에 브랜치를 올림. <br />
-          3. PR(리뷰 요청)을 통해 코드 검토. <br />
-          4. 수정 사항이 있다면 재작업 후 다시 PR. <br />
-          5. 리뷰 통과 시 Merge를 통해 반영.
-          <br />
-        </GitHubStrategy>
-      </ProjectInfo>
+     
       <VideoEmbed />
       <VideoEmbed2 />
       <ProjectInfo>
@@ -363,7 +394,7 @@ export default function Fantion() {
           <LinkTitle>
             Github :{" "}
             <Link
-              to="https://github.com/Fan-Tion"
+              to="https://github.com/Min-byeonghyun/Fan-Tion"
               target="_blank"
               rel="noopener noreferrer"
             >

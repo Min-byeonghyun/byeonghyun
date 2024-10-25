@@ -85,16 +85,18 @@ const BoxInfo = styled.ul`
   margin-top: 15px;
   font-size: 18px;
   line-height: 30px;
-  list-style-type: none;
+  list-style-type: disc;
   padding-left: 0;
-  li::before {
-    content: "•";
-    margin-right: 8px;
-  }
 `;
 const InfoList = styled.li`
+  font-size: 18px;
+  line-height: 43px;
+  font-weight: bold;
+`;
+
+const BoxSub = styled.p`
   font-size: 16px;
-  line-height: 50px;
+  font-weight: normal;
 `;
 const Team = styled.div`
   padding: 20px;
@@ -142,8 +144,8 @@ export default function PetTalk() {
         <ModalListBox>
           <ModalLeft>소개글</ModalLeft>
           <ModalRight>
-            애견 커뮤니티 펫톡(PetTalk) 애견인들이 강아지와 함께 하는 일상을
-            공유하고
+            애견 커뮤니티 펫톡(PetTalk) 애견인들이 자신의 애견과 함께 하는
+            일상을 공유하고
             <br />
             애견 관련 정보를 얻어갈 수 있는 종합 커뮤니티
           </ModalRight>
@@ -164,36 +166,43 @@ export default function PetTalk() {
         </ModalListBox>
       </TopBox>
       <ProjectInfo>
-        <InfoName>프로젝트 소개</InfoName>
-        <BoxInfo>
-          <InfoList>
-            애견인들이 강아지와 함께 하는 일상을 공유할 수 있습니다.
-          </InfoList>
-          <InfoList>
-            애견 관련 정보를 커뮤니티를 통해 얻어갈 수 있습니다.
-          </InfoList>
-          <InfoList>
-            Info페이지에서 쉽게 애견을 위한 장소를 찾을 수 있습니다.
-          </InfoList>
-        </BoxInfo>
-        <Team></Team>
-      </ProjectInfo>
-      <ProjectInfo>
         <InfoName>구현 기능</InfoName>
         <BoxInfo>
-          <InfoList>유저관련 (로그인, 회원가입, 소셜로그인,)</InfoList>
-          <InfoList>Kakao 맵을 활용한 애견지도 개발</InfoList>
-          <InfoList>커뮤니티 채널생성 페이지</InfoList>
           <InfoList>
-            Firebase Authentication을 통해 회원가입, 로그인 기능을 구현
+            유저 관리 기능 :
+            <BoxSub>
+              - Firebase Authentication을 활용하여 회원가입, 로그인, 소셜 로그인
+              ( 구글, 깃헙) 을 구현
+            </BoxSub>
           </InfoList>
           <InfoList>
-            Firebase Firestore를 사용해 커뮤니티 글 및 댓글을 안전하게 저장하고
-            관리
+            애견 지도 개발 :
+            <BoxSub>
+              - kakao 맵 API를 활용해 내 위치를 검색창에 검색할 시 내 위치에서
+              가까운 애견 공원 및 애견 샵 등을 지도에 표시하는 기능 구현{" "}
+            </BoxSub>
           </InfoList>
           <InfoList>
-            프로젝트를 Firebase Hosting에 배포하여 안정적이고 빠르게 서비스에
-            접근할 수 있도록 설정했습니다.
+            커뮤니티 기능 :
+            <BoxSub>
+              - Firebase Firestore를 사용해 커뮤니티 글과 댓글을 안전하게
+              저장하고 실시간으로 관리
+            </BoxSub>
+            <BoxSub>
+              - 커뮤니티 글에 대한 좋아요 기능, 댓글 수정 및 삭제 기능 구현{" "}
+            </BoxSub>
+            <BoxSub>- 커뮤니티 게시판 페이지네이션 기능 구현</BoxSub>
+          </InfoList>
+          <InfoList>마이페이지 :</InfoList>
+          <BoxSub>
+            - 사용자 닉네임 수정 , 내 게시글 조회 및 수정 삭제 기능 구현
+          </BoxSub>
+          <InfoList>
+            배포 :
+            <BoxSub>
+              - Firebase Hosting을 사용하여 프로젝트를 배포하고, 사용자들이
+              안정적으로 서비스를 이용할 수 있도록 설정.
+            </BoxSub>
           </InfoList>
           <Team></Team>
         </BoxInfo>
@@ -201,7 +210,7 @@ export default function PetTalk() {
       <ProjectInfo>
         <InfoName> 첫 번째 Firebase 프로젝트: 배움과 성장의 과정</InfoName>
         <Collaboration>
-          이 프로젝트는 처음으로 진행한 개인 프로젝트로, Firebase를 활용해
+          이 프로젝트는 처음으로 진행한 개인 프로젝트로, Firebase를 활용해ㅇ\
           보자는 목표에서 시작하였습니다.
           <br />
           Firebase를 처음 사용해보았기 때문에 결과물이 제가 생각했던 만큼
