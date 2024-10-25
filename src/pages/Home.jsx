@@ -20,6 +20,7 @@ const NameBox = styled.div`
   padding: 70px;
 
   @media (max-width: 768px) {
+    width : 500px;
     padding: 30px;
     align-items: center;
   }
