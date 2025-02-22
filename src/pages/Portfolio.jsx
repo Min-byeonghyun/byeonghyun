@@ -182,7 +182,7 @@ const FooterBox = styled.div`
 const StackItem = styled.div`
   display: flex;
   align-items: center;
-  width : 100%;
+  width: 100%;
 `;
 
 const StackList = styled.span`
@@ -240,16 +240,16 @@ const ProjectDate = styled.div`
   padding: 10px 12px 6px;
 `;
 const ListBox = styled.div`
-  display : flex;
+  display: flex;
   width: 100%;
   padding: 10px 5px 6px;
   @media (max-width: 768px) {
     width: 100%;
-    overflow : hidden;
+    overflow: hidden;
   }
   @media (max-width: 480px) {
-   width : 100%;
-   overflow : hidden;
+    width: 100%;
+    overflow: hidden;
   }
 `;
 const ListName = styled.span`
@@ -454,17 +454,19 @@ export default function Portfolio() {
       </ProfileBox>
       <Bubble>
         <Arrow />
-        IT 보안 전공 후 우연히 웹 개발에 매료되어 독학을 시작했습니다. <br/>
-    이후 부트캠프에서 HTML, CSS, JavaScript, React, TypeScript를 체계적으로 학습하며,
-    직접 웹 페이지를 설계하고 구현하는 과정에서 큰 흥미를 느꼈습니다.
-    <br />
-    개인 프로젝트와 팀 프로젝트를 통해 Firebase를 활용한 백엔드 기능 구축 경험과 
-    협업의 중요성을 깨달았습니다. <br/>Discord와 Slack을 통해 팀원들과의 원활한 소통을 
-    이어가며 문제를 해결해 나가는 과정에서 자신감을 얻었습니다.
-    <br />
-    앞으로도 사용자 경험을 개선하는 프론트엔드 개발자로 성장하기 위해 
-    꾸준히 학습하고 도전해 나갈 것입니다.
-    <br />
+        IT 보안 전공 후 우연히 웹 개발에 매료되어 독학을 시작했습니다. <br />
+        이후 부트캠프에서 HTML, CSS, JavaScript, React, TypeScript를 체계적으로
+        학습하며, 직접 웹 페이지를 설계하고 구현하는 과정에서 큰 흥미를
+        느꼈습니다.
+        <br />
+        개인 프로젝트와 팀 프로젝트를 통해 Firebase를 활용한 백엔드 기능 구축
+        경험과 협업의 중요성을 깨달았습니다. <br />
+        Discord와 Slack을 통해 팀원들과의 원활한 소통을 이어가며 문제를 해결해
+        나가는 과정에서 자신감을 얻었습니다.
+        <br />
+        앞으로도 사용자 경험을 개선하는 프론트엔드 개발자로 성장하기 위해 꾸준히
+        학습하고 도전해 나갈 것입니다.
+        <br />
       </Bubble>
       <TitleBox>
         <Title>기술스택</Title>
@@ -479,6 +481,7 @@ export default function Portfolio() {
           <StackItem>
             <StackTitle>Framework & Library</StackTitle>
             <StackList>React</StackList>
+            <StackList>Next.js</StackList>
             <StackList>SCSS</StackList>
             <StackList>Styled-components</StackList>
             <StackList>React-router</StackList>
@@ -489,8 +492,11 @@ export default function Portfolio() {
             <StackList>GitHub</StackList>
             <StackList>Axios</StackList>
             <StackList>Firebase</StackList>
-            <StackList>AWS</StackList>
             <StackList>Vercel</StackList>
+          </StackItem>
+          <StackItem>
+            <StackTitle>Database</StackTitle>
+            <StackList>MongoDB</StackList>
           </StackItem>
         </StackBox>
       </TitleBox>
