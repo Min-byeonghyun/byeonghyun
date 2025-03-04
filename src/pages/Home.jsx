@@ -20,7 +20,7 @@ const NameBox = styled.div`
   padding: 70px;
 
   @media (max-width: 768px) {
-    width : 500px;
+    width: 500px;
     padding: 30px;
     align-items: center;
   }
@@ -66,8 +66,8 @@ const MyImg = styled.img`
 `;
 
 const ExplainBox = styled.div`
-  display : flex;
-  justify-content : center;
+  display: flex;
+  justify-content: center;
   margin-top: 50px;
   width: 900px;
   border: 1px solid #ced4da;
@@ -190,7 +190,16 @@ const Home = () => {
       </ImgBox>
       <ExplainBox>
         <Explain>
-          안녕하세요 사용자 경험을 최우선으로 생각하며, <br/>협업을 통해 문제를 해결하고, 지속적으로 성장하고자 하는 프론트엔드 개발자 민병현입니다.
+          사용자가 직관적으로 이용할 수 있는, 생각한 대로 원활하게 작동하는
+          서비스를 만드는 것을 목표로 합니다.
+          <br />
+          서비스는 혼자가 아닌 함께 만들어가는 것이라고 믿습니다.
+          <br />
+          적극적인 소통과 협업을 통해 가치 있는 결과를 함께 이루어낼 수 있다고
+          생각합니다.. <br />
+          UX뿐만아니라 같이 일하는 팀원들의 DX를 고려하여 코드를 설계하기 위해
+          노력합니다.
+          <br />
         </Explain>
       </ExplainBox>
       <MainBox>

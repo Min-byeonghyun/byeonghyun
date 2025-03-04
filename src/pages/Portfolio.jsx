@@ -454,18 +454,15 @@ export default function Portfolio() {
       </ProfileBox>
       <Bubble>
         <Arrow />
-        IT 보안 전공 후 우연히 웹 개발에 매료되어 독학을 시작했습니다. <br />
-        이후 부트캠프에서 HTML, CSS, JavaScript, React, TypeScript를 체계적으로
-        학습하며, 직접 웹 페이지를 설계하고 구현하는 과정에서 큰 흥미를
-        느꼈습니다.
+        사용자가 직관적으로 이용할 수 있는, 생각한 대로 원활하게 작동하는
+        서비스를 만드는 것을 목표로 합니다.
         <br />
-        개인 프로젝트와 팀 프로젝트를 통해 Firebase를 활용한 백엔드 기능 구축
-        경험과 협업의 중요성을 깨달았습니다. <br />
-        Discord와 Slack을 통해 팀원들과의 원활한 소통을 이어가며 문제를 해결해
-        나가는 과정에서 자신감을 얻었습니다.
+        서비스는 혼자가 아닌 함께 만들어가는 것이라고 믿습니다.
         <br />
-        앞으로도 사용자 경험을 개선하는 프론트엔드 개발자로 성장하기 위해 꾸준히
-        학습하고 도전해 나갈 것입니다.
+        적극적인 소통과 협업을 통해 가치 있는 결과를 함께 이루어낼 수 있다고
+        생각합니다.. <br />
+        UX뿐만아니라 같이 일하는 팀원들의 DX를 고려하여 코드를 설계하기 위해
+        노력합니다.
         <br />
       </Bubble>
       <TitleBox>
@@ -508,7 +505,7 @@ export default function Portfolio() {
               <ProjectImg src="/img/mainLogo2.png" />
               <FooterBox>
                 <ProjectName>FAN-TION (팬덤 경매 플랫폼)</ProjectName>
-                <ProjectDate>2024년 6월 24일 ~ 2024년 7월 27일 </ProjectDate>
+                <ProjectDate>2024년 6월 24일 ~ 2024년 8월 16일 </ProjectDate>
                 <ListBox>
                   <ListName>Javascript</ListName>
                   <ListName>React</ListName>

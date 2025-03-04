@@ -173,7 +173,7 @@ export default function Fantion() {
         </ModalListBox>
         <ModalListBox>
           <ModalLeft>진행 기간</ModalLeft>
-          <ModalRight>2024년 6월 24일 ~ 2024년 7월 27일</ModalRight>
+          <ModalRight>2024년 6월 24일 ~ 2024년 8월 16일</ModalRight>
         </ModalListBox>
         <ModalListBox>
           <ModalLeft>Skills & Libraries</ModalLeft>
